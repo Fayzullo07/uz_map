@@ -24,7 +24,7 @@ const TreeMap = () => {
       <div>
         <svg
           width="1038"
-          height="600"
+          height="500"
           viewBox="0 0 1038 806"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
