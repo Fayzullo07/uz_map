@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Modal from "./Modal";
 import { data } from "../data/data";
 
+
 const TreeMap = () => {
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
@@ -10,7 +11,12 @@ const TreeMap = () => {
   useEffect(() => {
     document.querySelectorAll("g").forEach((el, i) => {
       el.children[1].classList.add("cursor-pointer");
-      el.children[1].classList.add("hover:fill-blue-600");
+      el.children[1].classList.add("hover:fill-blue-500");
+      if(i % 2 === 0) {
+        el.children[1].classList.add(`fill-yellow-400`);
+      } else {
+        el.children[1].classList.add(`fill-red-600`);
+      }
       el.addEventListener("click", () => {
         openModal();
         setSelected(data[i]);
